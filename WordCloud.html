@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WordCloud</title>
+    <style type="text/css">
+        @import "CSS/bootstrap.css";
+        @import "CSS/home-index.css";
+        @import "CSS/Site.css";
+        @import "CSS/jquery-ui.min.css";
+    </style>
+    <script src="Scripts/External Libraries/jquery-3.2.1.js"></script>
+    <script src="Scripts/External Libraries/jquery-ui.min.js"></script>
+    <script src="Scripts/External Libraries/d3.js"></script>
+    <script src="Scripts/External Libraries/Font.js"></script>
+    <script src="Scripts/home-index.js"></script>
+    <script src="Scripts/WordCloudLayout.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-lg-6">
+            <div class="my-panel">
+                <span class="my-panel-heading">
+                    Configuration
+                </span>
+                <hr class="my-panel-seg"/>
+                <form>
+                    <div class="form-group">
+                        <label for="text-content-text">Content</label>
+                        <textarea class="form-control" rows="5" id="text-content-text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default" id="update-button">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-xs-6 col-lg-6">
+            <div class="my-panel" @*style="display: none">
+                <div>
+                    <span class="my-panel-heading">WordCloud</span>
+                </div>
+                <hr class="my-panel-seg" />
+                <p>
+                    <label for="amount" id="text">Number of Keywords: </label>
+                    <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+
+                <div id="slider-range-min"></div>
+                <div id="word-cloud"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
