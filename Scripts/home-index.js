@@ -9,8 +9,8 @@ $(function () {
         var pairSep = /[ \n]/;
         var sep = ",";
         var words = new Array();
-        var minFontSize = 5;
-        var maxFontSize = 30;
+        var minFontSize = 8;
+        var maxFontSize = 28;
         //alert("clicked");
 
         var pair = content.split(pairSep);
@@ -24,13 +24,14 @@ $(function () {
             }
         }
 
-        WordCloudLayout.select("word-cloud")
+        RadialWordCloudLayout.select("word-cloud")
             .text(words)
             .attr("width", $("#word-cloud").width())
-            .attr("height", $("#word-cloud").height())
+            .attr("height", $("#word-cloud").height() * 1.2)
             .attr("num", words.length)
             .attr("minFontSize", minFontSize)
             .attr("maxFontSize", maxFontSize)
+            .attr("font", "Times New Roman")
             .show();
 
         $( "#slider-range-min" ).slider({
@@ -40,14 +41,15 @@ $(function () {
             max: pair.length,
             slide: function( event, ui ) {
                 $( "#amount" ).val( ui.value );
-                
-                WordCloudLayout.select("word-cloud")
+
+                RadialWordCloudLayout.select("word-cloud")
                     .text(words)
                     .attr("width", $("#word-cloud").width())
                     .attr("height", $("#word-cloud").height())
                     .attr("num", ui.value)
                     .attr("minFontSize", minFontSize)
                     .attr("maxFontSize", maxFontSize)
+                    .attr("font", "Times New Roman")
                     .show();
             }
         });

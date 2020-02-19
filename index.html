@@ -13,13 +13,16 @@
     <script src="Scripts/External Libraries/jquery-ui.min.js"></script>
     <script src="Scripts/External Libraries/d3.js"></script>
     <script src="Scripts/External Libraries/Font.js"></script>
-    <script src="Scripts/home-index.js"></script>
-    <script src="Scripts/WordCloudLayout.js"></script>
 </head>
 
 <body>
 <div class="container">
     <div class="row">
+        <div>
+            <svg width="0" height="0">
+                <text id="measureText" style="visibility: hidden"></text>
+            </svg>
+        </div>
         <div class="col-xs-6 col-lg-6">
             <div class="my-panel">
                 <span class="my-panel-heading">
@@ -55,4 +58,9 @@
     </div>
 </div>
 </body>
+
+<script src="Scripts/common.js"></script>
+<script src="Scripts/RadialWordCloudLayout.js"></script>
+<script src="Scripts/home-index.js"></script>
+<script src="Scripts/WordCloudLayout.js"></script>
 </html>

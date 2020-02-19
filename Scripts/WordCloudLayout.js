@@ -134,7 +134,6 @@
             .domain(d3.extent(words, function (word) { return word.weight }))
             .range([minFontSize, maxFontSize]);
 
-
         if(words.length === 2 && words[0].weight === words[1].weight){
             for (let i = 0; i < words.length; i++) {
                 words[i].word = "___" + words[i].word;
@@ -221,8 +220,7 @@
             $("#" + id).visibility = "visible";
 
             //show the word cloud
-            d3
-                .select("#" + id)
+            d3.select("#" + id)
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height)
@@ -280,7 +278,7 @@
         let boundHeight = height;
         let HorizontalGap = 2;
         let VerticalGap = 2;
-        let EllipseCenter = new Point(boundWidth/2,boundHeight/2);
+        let EllipseCenter = new Point(boundWidth/2*2,boundHeight/2*2);
         wordList.splice(0,wordList.length);
 
         for(let i = 0; i < words.length;i++)

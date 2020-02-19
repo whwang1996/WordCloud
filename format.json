@@ -1,0 +1,28 @@
+{
+  "topic1": {
+    "weight": 100,
+    "keywords": [
+      {
+        "keyword": "keyword1",
+        "weight": 1
+      },
+      {
+        "keyword": "keyword2",
+        "weight": 1
+      }
+    ]
+  },
+  "topic2": {
+    "weight": 100,
+    "keywords": [
+      {
+        "keyword": "keyword3",
+        "weight": 1
+      },
+      {
+        "keyword": "keyword4",
+        "weight": 1
+      }
+    ]
+  }
+}
