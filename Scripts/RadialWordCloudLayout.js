@@ -304,17 +304,17 @@
             let groupWidth = node.getBBox().width;
             let groupHeight = node.getBBox().height;
 
-            if (index === 0) {
-                group
-                .append('ellipse')
-                .attr('cx', topic2LayoutCenterDict[topic].X)
-                .attr('cy', topic2LayoutCenterDict[topic].Y)
-                .attr('rx', groupWidth / 2 * 1.2)
-                .attr('ry', groupHeight / 2 * 1.2)
-                .style('fill', 'none')
-                .style('stroke', CategoryColor[index])
-                .style('opacity', 0.8);
-            }
+            // if (index === 0) {
+            //     group
+            //     .append('ellipse')
+            //     .attr('cx', topic2LayoutCenterDict[topic].X)
+            //     .attr('cy', topic2LayoutCenterDict[topic].Y)
+            //     .attr('rx', groupWidth / 2 * 1.2)
+            //     .attr('ry', groupHeight / 2 * 1.2)
+            //     .style('fill', 'none')
+            //     .style('stroke', CategoryColor[index])
+            //     .style('opacity', 0.8);
+            // }
 
             g_text.raise();
         });
